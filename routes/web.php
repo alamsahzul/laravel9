@@ -4,6 +4,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DosenController;
 use Illuminate\Support\Facades\Route;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +36,9 @@ Route::resource('dosen', DosenController::class);
 // Route::get('/dosen/{dosen}/edit', [DosenController::class, 'edit']);
 // Route::put('/dosen/{dosen}', [DosenController::class, 'update']);
 // Route::delete('/dosen/{dosen}', [DosenController::class, 'delete']);
+
+Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
+
+Route::get('/debug-sentry', function () {
+    throw new Exception('My first Sentry error!');
+});

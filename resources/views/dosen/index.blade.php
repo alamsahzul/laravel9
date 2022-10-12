@@ -18,6 +18,7 @@
                 <th>Status Dosen</th>
                 <th>Nomor HP</th>
                 <th>TTL</th>
+                <th>Departement</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -30,6 +31,7 @@
                     <td>{{ $d->status_dosen == 1 ? 'Aktif' : 'Tidak Aktif' }}</td>
                     <td>{{ $d->hp }}</td>
                     <td>{{ $d->ttl }}</td>
+                    <td>{{ $d->departement ? $d->departement->nama_deparment : 'Kosong' }}</td>
                     <td>
                         {{ Form::open(['url' => 'dosen/' . $d->id, 'method' => 'delete']) }}
                         {{ Form::submit('Hapus', ['class' => 'btn btn-danger btn-sm']) }}

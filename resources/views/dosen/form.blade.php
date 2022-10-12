@@ -35,7 +35,7 @@
 <tr>
     <td>Department</td>
     <td>
-        {{ Form::select('department', $deparments, null, ['class' => 'form-control']) }}
+        {{ Form::select('departement_id', $departement, null, ['class' => 'form-control']) }}
     </td>
 </tr>
 <tr>
